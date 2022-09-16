@@ -1,0 +1,39 @@
+# comment = olyan sorok, amiket nem próbál meg az interpreter/compiler "értelmezni", mint kódot.
+# általában dokumentációra vagy magyarázatra használjuk
+# pythonban a jele: # (kettőskereszt) a sor elején
+# nev = 'Zoli'
+# nev:str = 'Zoli'
+# str = a 'string' szó rövidítése, "karakterlánc"ot jelent
+# a direkt típusmeghatározás (:str) pythonban 'elhagyható' - ebben az esetben az interpreter 'dönt' az adott változó típusáról akkor, amikor az először használatba kerül.
+# print(f'Hello {nev}!')
+# az f egy string előtt azt jeleni, hogy 'formated string' következik. ebben az esetben a string-en belül {}-jelek között bármilyen kifejezés vagy változó használható - így nem a "{nev}"-et fogja kiírni, hanem az, amit a nev-nevű változó tartalmaz (ebben az esetben a nevünket)
+
+---------------
+
+# az 'input' MINDIG str-t "ad vissza", tök mindegy, hogy milyen típusú vltozóba tárolnám le
+
+# át kell alakítani, ah azt szeretném, hogy a továbbiakban az interpreter (az, ami a forráskódot értelmezi) számként kezelje:
+# tipus_neve(átalakítandó_karakterlánc)
+# pl: int(kor)
+
+# egy sorban:
+kor = int(input('hány éves vagy? '))
+
+# függvénykiértékelési sorrend: "verem" (stack) adatszerkezet (FIFO - first in last out): tehát ami 'legbelül' van, az fok lefutni először:
+# 1) kiírja, hogy "hány éves vagy? "
+# 2) vár egy inputot a terminálról (ami ügye egy str lesz)
+# 3) 'átalakítja' ténylegesen numerikus típusmeghatározás
+
+---------------
+
+"SZELEKCIÓ" (elágazás)
+
+# if: jelentése 'ha'
+# else: jelentése 'különben'/'egyébként'
+
+if {logikai feltétel}:
+    [behúzás azaz INDENTÁCIÓ után]
+    {programrész, ami CSAK akkor fut le, ha a {logikai feltétel} IGAZ
+else:
+    [INDENTÁCIÓ után]
+    {programrész, ami CSAK akkor fut le, ha a {logikai feltétel} HAMIS
