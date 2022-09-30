@@ -1,4 +1,4 @@
-allatok:list[str] = {
+allatok:set[str] = {
     'Grabovsky',
     'Hógolyó',
     'Emily',
